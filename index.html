@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — iOS Developer</title>
+<title> YEN PHEAYUTH — iOS Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -471,7 +471,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"> YEN<span>PHEAYUTH </span></a>
+  <a href="#" class="nav-logo">YEN<span>PHEAYUTH </span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -488,7 +488,7 @@ footer {
 
   <div class="hero-badge"><div class="hero-badge-dot"></div> iOS Developer · Available for Work</div>
   <h1 class="hero-name">YEN<span> PHEAYUTH</span></h1>
-  <p class="hero-title">Senior iOS Developer</p>
+  <p class="hero-title"> iOS Developer</p>
   <p class="hero-desc">I craft native iOS experiences with Swift, SwiftUI, and UIKit — focused on performance, clean architecture, and apps that users genuinely love.</p>
   <div class="hero-actions">
     <a href="#projects" class="btn-primary">View My Apps</a>
@@ -544,7 +544,7 @@ footer {
         <div class="about-card">
           <div class="about-card-header">
             <div class="about-avatar">
-              <img src="YuthFight.JPG" alt="YP" />
+              <img src="/YuthFight.JPG" alt="YP" />
             </div>
             <div>
               <div class="about-card-name">YEN PHEAYUTH</div>
@@ -834,22 +834,24 @@ footer {
         </div>
       </div>
       <div class="contact-form reveal" style="transition-delay:0.2s">
-        <div class="form-title">Send a message</div>
-        <div class="form-row">
-          <div class="fg"><label class="fl">First name</label><input type="text" class="fi" placeholder="Enter First Name"></div>
-          <div class="fg"><label class="fl">Last name</label><input type="text" class="fi" placeholder="Enter Last Name"></div>
-        </div>
-        <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="Enter Email"></div>
-        <!-- <div class="fg"><label class="fl">Company</label><input type="text" class="fi" placeholder="Enter Company"></div> -->
-        <div class="fg"><label class="fl">Message</label><textarea class="fta" placeholder="Enter Message"></textarea></div>
-        <button class="fsub" onclick="this.textContent='Message sent! I\'ll be in touch soon 👋';this.style.background='#34c759'">Send Message</button>
+        <form action="https://formspree.io/f/xdawnqzg" method="POST">
+          <div class="form-title">Send a message</div>
+          <div class="form-row">
+            <div class="fg"><label class="fl">Your name</label><input type="text" id="name" name="name" class="fi" placeholder="Enter Your Name"></div>
+            <!-- <div class="fg"><label class="fl">Last name</label><input type="text" class="fi" placeholder="Enter Last Name"></div> -->
+          </div>
+          <div class="fg"><label class="fl">Email</label><input type="email" name="email" class="fi" placeholder="Enter Email"></div>
+          <!-- <div class="fg"><label class="fl">Company</label><input type="text" class="fi" placeholder="Enter Company"></div> -->
+          <div class="fg"><label class="fl">Message</label><textarea class="fta" name="message" placeholder="Enter Message"></textarea></div>
+          <button class="fsub" type="submit" onclick="this.textContent='Message sent! I\'ll be in touch soon 👋';this.style.background='#34c759'">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-brand">YEN<span>PHEAYUTH</span></div>
+  <div class="footer-brand"> YEN<span>PHEAYUTH</span></div>
   <div class="footer-copy">© 2026 · iOS Developer</div>
   <div class="footer-links">
     <a href="https://github.com/Pheayuth222" target="_blank">GitHub</a>
