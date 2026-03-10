@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> YEN PHEAYUTH — iOS Developer</title>
+<!-- Font Awesome 6 (recommended) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -60,12 +62,28 @@ nav {
 }
 .nav-links a:hover { color: var(--blue); }
 .nav-btn {
-  padding: 7px 18px;
-  background: var(--blue); color: #fff !important;
-  border-radius: 980px; font-size: 13px !important; font-weight: 600 !important;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+  font: inherit;
+  background-color: #f0f0f0;
+  border: 0;
+  color: #242424;
+  border-radius: 0.5em;
+  font-size: 1.35rem;
+  padding: 0.375em 1em;
+  font-weight: 600;
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
 }
-.nav-btn:hover { background: #0077ed !important; transform: scale(1.03); box-shadow: var(--shadow-blue) !important; }
+
+.nav-btn:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
 
 /* ── HERO ── */
 .hero {
@@ -140,16 +158,49 @@ nav {
   display: inline-block;
 }
 .btn-primary:hover { background: #0077ed; transform: scale(1.02); box-shadow: var(--shadow-blue); }
+
+/* From Uiverse.io by shah1345 */ 
 .btn-secondary {
-  padding: 14px 32px;
-  background: var(--off-white); color: var(--ink);
-  border-radius: 980px; font-size: 15px; font-weight: 600;
-  text-decoration: none; letter-spacing: -0.01em;
-  border: 1px solid var(--border);
-  transition: background 0.2s, border-color 0.2s;
-  display: inline-block;
+ padding: 1em 2em;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0171e3;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #0171e3;
 }
-.btn-secondary:hover { background: #ebebeb; border-color: #c7c7cc; }
+
+.btn-secondary:hover {
+  color: #ffffff;
+  transform: scale(1.02);
+  outline: 2px solid #0171e3;
+  box-shadow: 4px 5px 17px -4px #0171e3;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #0171e3;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.btn-secondary:hover::before {
+  width: 250%;
+}
+
 
 /* Hero device mockup row */
 .hero-devices {
@@ -232,6 +283,7 @@ nav {
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-md);
 }
+
 .about-card-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border-light); }
 .about-avatar {
   width: 64px; height: 64px; border-radius: 50%;
@@ -491,11 +543,12 @@ footer {
   <p class="hero-title"> iOS Developer</p>
   <p class="hero-desc">I craft native iOS experiences with Swift, SwiftUI, and UIKit — focused on performance, clean architecture, and apps that users genuinely love.</p>
   <div class="hero-actions">
-    <a href="#projects" class="btn-primary">View My Apps</a>
+    <!-- <a href="#projects" class="btn-primary">View My Apps</a> -->
+     <a href="https://github.com/Pheayuth222?tab=repositories" target="_blank" class="btn-primary">My Repositories</a>
     <a href="#contact" class="btn-secondary">Get in Touch</a>
   </div>
 
-  <div class="hero-devices">
+  <!-- <div class="hero-devices">
     <div class="device side">
       <div class="device-screen app2">
         <div class="ds-top app2"><div class="ds-icon pi2" style="width:28px;height:28px;border-radius:8px;"></div><div class="ds-appname">HealthKit</div><div class="ds-sub">Fitness App</div></div>
@@ -514,7 +567,7 @@ footer {
         <div class="ds-bottom"><div class="ds-bar w60"></div><div class="ds-bar w80"></div><div class="ds-bar" style="width:45%"></div><div class="ds-bar w90"></div></div>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!-- ABOUT -->
@@ -544,7 +597,7 @@ footer {
         <div class="about-card">
           <div class="about-card-header">
             <div class="about-avatar">
-              <img src="YuthFight.JPG" alt="YP" />
+              <img src="/YuthFight.JPG" alt="YP" />
             </div>
             <div>
               <div class="about-card-name">YEN PHEAYUTH</div>
@@ -592,7 +645,7 @@ footer {
           <div class="exp-role">Assistant Manager, Mobile Application Development</div>
           <div class="exp-period">2025 — Present</div>
         </div>
-        <div class="exp-company">Woori Bank Cambodia · Full-time</div>
+        <div class="exp-company"><a href="https://www.wooribank.com.kh" target="_blank" style="text-decoration: none; color: rgb(1, 113, 227);">Woori Bank Cambodia</a> | Full-time</div>
         <div class="exp-desc">Oversees the development, performance, and strategy of mobile products, apps, or services, typically within a financial institution.</div>
         <div class="exp-highlights">
           <div class="exp-highlight">Migrated legacy UIKit codebase to SwiftUI, reducing build times by 40%</div>
@@ -613,7 +666,7 @@ footer {
           <div class="exp-role">iOS Developer</div>
           <div class="exp-period">2021 — 2023</div>
         </div>
-        <div class="exp-company">Previous Company · Full-time</div>
+        <div class="exp-company"><a href="https://www.kosign.com.kh/" target="_blank" style="text-decoration: none; color: rgb(1, 113, 227);">KOSIGN (Cambodia) Investment Co., Ltd.</a> | Full-time</div>
         <div class="exp-desc">Developed and maintained two flagship iOS apps in the fintech space. Collaborated closely with design and backend teams to deliver features on tight release schedules while maintaining high code quality.</div>
         <div class="exp-highlights">
           <!-- <div class="exp-highlight">Built real-time transaction feed using Combine and WebSockets</div> -->
@@ -634,7 +687,7 @@ footer {
           <div class="exp-role">Graphic Designer</div>
           <div class="exp-period">2019 — 2020</div>
         </div>
-        <div class="exp-company">First Company · Full-time</div>
+        <div class="exp-company">Hong Gold Zona Co.,Ltd · Full-time</div>
         <div class="exp-desc">Started my first job with graphic design.</div>
         <div class="exp-highlights">
           <div class="exp-highlight">Created posters, banners to client requiements</div>
@@ -735,7 +788,9 @@ footer {
 
     <div class="skills-grid">
       <div class="skill-card reveal" style="transition-delay:0.08s">
-        <div class="skill-card-icon">📱</div>
+        <div class="skill-card-icon">
+          <i class="fa-brands fa-swift"></i>
+        </div>
         <div class="skill-card-title">iOS Frameworks</div>
         <div class="skill-items">
           <div class="skill-item-row"><span class="skill-item-name">SwiftUI</span><div class="skill-bar"><div class="skill-fill" style="width:42%"></div></div></div>
@@ -746,7 +801,9 @@ footer {
       </div>
 
       <div class="skill-card reveal" style="transition-delay:0.14s">
-        <div class="skill-card-icon">⚡</div>
+        <div class="skill-card-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
         <div class="skill-card-title">Languages</div>
         <div class="skill-items">
           <div class="skill-item-row"><span class="skill-item-name">Swift</span><div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div></div>
@@ -757,7 +814,9 @@ footer {
       </div>
 
       <div class="skill-card reveal" style="transition-delay:0.2s">
-        <div class="skill-card-icon">🏗️</div>
+        <div class="skill-card-icon">
+          <i class="fa-solid fa-archway"></i>
+        </div>
         <div class="skill-card-title">Architecture</div>
         <div class="skill-items">
           <div class="skill-item-row"><span class="skill-item-name">MVVM</span><div class="skill-bar"><div class="skill-fill" style="width:94%"></div></div></div>
@@ -768,7 +827,9 @@ footer {
       </div>
 
       <div class="skill-card reveal" style="transition-delay:0.26s">
-        <div class="skill-card-icon">🔧</div>
+        <div class="skill-card-icon">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
         <div class="skill-card-title">Tools & DevOps</div>
         <div class="skill-items">
           <div class="skill-item-row"><span class="skill-item-name">Xcode</span><div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div></div>
@@ -815,20 +876,28 @@ footer {
           <p>I'm looking for opportunities to work on products that make a real difference. If you're building something ambitious on iOS and need an engineer who cares about quality — I'd love to hear from you.</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:you@example.com" class="c-link">
-            <div class="c-icon">✉️</div>
+          <a href="mailto:yenpheayuth2222@gmail.com" target="_blank" class="c-link">
+            <div class="c-icon">
+              <i class="fa-solid fa-at"></i>
+            </div>
             <div class="c-text"><strong>Email</strong><span>yenpheayuth2222@gmail.com</span></div>
           </a>
-          <a href="#" class="c-link">
-            <div class="c-icon">💼</div>
+          <a href="https://www.linkedin.com/in/pheayuth-yen-86a653196/" target="_blank" class="c-link">
+            <div class="c-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
             <div class="c-text"><strong>LinkedIn</strong><span>linkedin.com/in/pheayuth-yen</span></div>
           </a>
-          <a href="#" class="c-link">
-            <div class="c-icon">🐙</div>
+          <a href="https://github.com/Pheayuth222" target="_blank" class="c-link">
+            <div class="c-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
             <div class="c-text"><strong>GitHub</strong><span>github.com/Pheayuth222</span></div>
           </a>
           <a href="#" class="c-link">
-            <div class="c-icon">📄</div>
+            <div class="c-icon">
+              <i class="fa-solid fa-download"></i>
+            </div>
             <div class="c-text"><strong>Resume</strong><span>Download PDF</span></div>
           </a>
         </div>
@@ -843,7 +912,9 @@ footer {
           <div class="fg"><label class="fl">Email</label><input type="email" name="email" class="fi" placeholder="Enter Email"></div>
           <!-- <div class="fg"><label class="fl">Company</label><input type="text" class="fi" placeholder="Enter Company"></div> -->
           <div class="fg"><label class="fl">Message</label><textarea class="fta" name="message" placeholder="Enter Message"></textarea></div>
-          <button class="fsub" type="submit" onclick="this.textContent='Message sent! I\'ll be in touch soon 👋';this.style.background='#34c759'">Send Message</button>
+          <button class="fsub" type="submit" onclick="this.textContent='Message sent! I\'ll be in touch soon 👋';this.style.background='#34c759'">Send Message 
+            
+          </button>
         </form>
       </div>
     </div>
